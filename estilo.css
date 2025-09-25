@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: blanchedalmond;
+}
+.banner{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.texto{
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    overflow-y: auto;
+
+    p{
+    width: 60%;
+    margin: auto;
+
+}
+}
+.botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    height: 20vh;
+    overflow-y: auto;
+
+    button{
+    padding: 5px;
+    margin-right: 5%;
+}
+}
+@media screen and (max-width: 650px) {
+    .botones{
+        flex-wrap: wrap;
+    }
+    button{
+        padding: 3px;
+    }
+}
