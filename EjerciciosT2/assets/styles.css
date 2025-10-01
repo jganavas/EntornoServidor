@@ -12,6 +12,12 @@ body{
     height: 100vh;
     background-color: bisque !important;
 }
+main{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 .navbar{
     width: 100%;
 }
@@ -20,7 +26,6 @@ body{
 }
 .contenedor{
     width: 70%;
-    height: 50%;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -30,7 +35,7 @@ body{
 h1{
     font-size: 50px;
     color: darkblue;
-    padding: 3% 0 3% 0;
+    padding: 2% 0 2% 0;
 }
 h2{
     font-size: 40px;
@@ -55,6 +60,7 @@ form{
     flex-direction: column;
     overflow-y: auto;
 
+
     input{
         width: 40%;
         margin: auto;
@@ -73,6 +79,13 @@ form{
         border-radius: 20px;
         margin-top: 1%;
     }
+}
+footer{
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: #212529;
 }
 
 

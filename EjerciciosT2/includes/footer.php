@@ -1,7 +1,8 @@
+</main>
+</body>
 <footer>
     <div class="copy">
         <img src="copy.png">
     </div>
 </footer>
-</body>
 </html>
