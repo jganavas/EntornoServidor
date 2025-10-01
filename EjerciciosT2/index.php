@@ -1,4 +1,4 @@
-<?php include("header.php");?>
+<?php include("./includes/header.php");?>
 <?php
     $nombre  = "Pepe";
     $edad = 26;
@@ -16,4 +16,4 @@
         </div>
     </main>
 
-<?php include("footer.php");?>
+<?php include("./includes/footer.php");?>

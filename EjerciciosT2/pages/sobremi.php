@@ -1,4 +1,4 @@
-<?php $title = 'Ejercicio 1'; include("header.php");?>
+<?php $title = 'Ejercicio 1'; include("../includes/header.php");?>
 
     <div class="contenedor">
         <h1>Desarrollador Web</h1>
@@ -7,4 +7,4 @@
         <p>Estoy abierto a colaborar en nuevos desafíos que me permitan crecer profesionalmente y aportar valor a través de la tecnología.</p>
     </div>
 
-<?php include("footer.php");?>
+<?php include("../includes/footer.php");?>
