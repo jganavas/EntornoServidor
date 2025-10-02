@@ -1,6 +1,7 @@
-<html>
+<?php include_once "../config/config.php"; ?>
+<html lang="es-ES">
 <head>
-    <title><?php echo $title = "Ejercicios"?></title>
+    <title><?php echo titulo?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../assets/styles.css" rel="stylesheet"/>
     <meta charset="utf-8"/>
@@ -19,13 +20,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.php">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href=<?php echo index?>>Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../pages/sobremi.php">Sobre mí</a>
+                            <a class="nav-link" href=<?php echo sobremi?>>Sobre mí</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../pages/contacto.php">Contacto</a>
+                            <a class="nav-link" href=<?php echo contacto?>>Contacto</a>
                         </li>
                     </ul>
                 </div>
