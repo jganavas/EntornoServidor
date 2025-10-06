@@ -4,6 +4,8 @@ define("index", "../index.php?pagina=index");
 define("sobremi", "../index.php/pages/acerca=sobremi");
 define("contacto", "../index.php?contact=contacto");
 
+$pagina = $_GET["pagina"] ?? "index";
+
 //VARIABLES
 const nombre = "Pepe";
 const edad = 26;

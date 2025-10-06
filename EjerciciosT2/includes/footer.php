@@ -1,4 +1,3 @@
-</main>
 </body>
 <footer>
     <div class="copy">
