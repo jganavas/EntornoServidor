@@ -1,5 +1,4 @@
-<?php
-<?include("../config/config.php");?>
+<?php include("../config/config.php");?>
 <div class="contenedor">
     <h1>Hola</h1>
     <h2>Mi nombre es <?php echo nombre?></h2>

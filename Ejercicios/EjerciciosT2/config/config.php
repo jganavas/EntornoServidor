@@ -1,10 +1,8 @@
 <?php
 //RUTAS
-define("index", "../index.php?pagina=index");
-define("sobremi", "../index.php/pages/acerca=sobremi");
-define("contacto", "../index.php?contact=contacto");
-
-$pagina = $_GET["pagina"] ?? "index";
+const index = "../index.php";
+define("sobremi", "../pages/sobremi.php");
+define("contacto", "../pages/contacto.php");
 
 //VARIABLES
 const nombre = "Pepe";
