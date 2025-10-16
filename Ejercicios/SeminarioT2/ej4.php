@@ -5,7 +5,7 @@ function esPalindromo($palabra){
     for($i = strlen($palabra); $i >= 0; $i--){
         $palabraReversa += $palabra[$i];
     }
-    $esPalindromo = ($palabraReversa == $palabra) ? "Es palíndromo" : "No es palíndromo";
+    return ($palabraReversa == $palabra) ? "Es palíndromo" : "No es palíndromo";
 }
 
 $esPalabruki = esPalindromo("reconocer");
