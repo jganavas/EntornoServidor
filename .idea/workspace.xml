@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8556c56b-ebdb-4f47-87f6-7d778f3a4e2d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Ejercicios/contacto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ejercicios/sobremi.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ejercicios/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ejercicios/ejercicio1.php" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicios/ejercicio1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ejercicios/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicios/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ejercicios/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicios/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/SeminarioT2/ej4.php" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicios/SeminarioT2/ej4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/subirNotaT2/ej2.php" beforeDir="false" afterPath="$PROJECT_DIR$/Ejercicios/subirNotaT2/ej2.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,10 +30,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/bin/php" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.4.12/bin/php" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="33S9aQyodu8o6CVHzAS8PdWbxwQ" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -43,24 +42,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/usua5pc6/Escritorio/EntornoServidor",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/usua5pc6/Escritorio/EntornoServidor&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -77,6 +76,9 @@
       <option name="presentableId" value="Default" />
       <updated>1759299669256</updated>
       <workItem from="1759299670980" duration="7476000" />
+      <workItem from="1760637943828" duration="289000" />
+      <workItem from="1760892922293" duration="7000" />
+      <workItem from="1760893029898" duration="2978000" />
     </task>
     <servers />
   </component>
