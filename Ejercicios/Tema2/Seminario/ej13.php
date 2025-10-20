@@ -1,17 +1,11 @@
 <?php
 
 function generarHTML($cadena){
-    $arrayClases = explode(".", $cadena);
-    $etiquetaPrimera = $arrayClases[0];
-    $arrayids = explode("#", $cadena);
-    $apertura = "<";
-    $cierre = ">"
-    $cierre2 = "</";
-    $clase = "class= ";
-    $id = "id= ";
+    $clases = preg_split('/[.#]/', $cadena);
+    $ides = preg_split('/[#]/', $cadena);
     
-    $html = $apertura . $arrayClases[0] . $clase . $arrayClases[1] . $id . $arrayids[1] . $cierre . $cierre2 . $cierre;
-    
+    $html = "<" . $clases[0]. "> class=" . $clases[1] . " id=" . $ides[1] . "></" . $clases[0] . ">";
+    return $html;
 }
 /*
 $cadena = "div.oferta#coche";

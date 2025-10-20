@@ -12,7 +12,7 @@
 <?php include("./includes/header.php");?>
 <body>
     <main>
-        <?php include './pages/main.php';?>
+        <?php include './pages/main.php'; ?>
     </main>
 </body>
 <?php include("./includes/footer.php");?>

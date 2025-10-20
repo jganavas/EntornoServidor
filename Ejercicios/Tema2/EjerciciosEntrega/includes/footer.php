@@ -1,5 +1,5 @@
 <footer>
     <div class="copy">
-        <img src="copy.png">
+        <img src="../assets/img/copy.png">
     </div>
 </footer>
