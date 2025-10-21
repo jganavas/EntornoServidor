@@ -1,18 +1,41 @@
 <?php
-
 function generarHTML($cadena){
-    $clases = preg_split('/[.#]/', $cadena);
-    $ides = preg_split('/[#]/', $cadena);
-    
-    $html = "<" . $clases[0]. "> class=" . $clases[1] . " id=" . $ides[1] . "></" . $clases[0] . ">";
-    return $html;
-}
-/*
-$cadena = "div.oferta#coche";
-$arrayClases = explode(".", $cadena);
-print_r($arrayClases);
-$arrayids = explode("#", $cadena);
-print_r($arrayids);
-*/
+    //$cadena = "div.coche cochaso primo#VWPolo";
+    $cadena = "div#VWPolo.coche cochaso primo";
+    $etiqueta = explode(".",$cadena)[0];
 
-echo generarHTML("div.coche#VWPolo");
+    $clases = "";
+    $id = "";
+
+    //Longitud etiqueta padre (div, section, main...)
+    $longitudEtiqueta = strlen($etiqueta);
+
+    if($cadena[$longitudEtiqueta] == "."){
+        $longitudEtiqueta++;
+        while($cadena[$longitudEtiqueta] != "#"){
+            $clases .= $cadena[$longitudEtiqueta++];
+        }
+        $longitudEtiqueta++;
+        while($cadena[$longitudEtiqueta] != $cadena[strlen($cadena)]){
+            $id .= $cadena[$longitudEtiqueta++];
+        }
+        //return "<" . $etiqueta . " class=" . $clases . " id=" . $id . "></" . $etiqueta . ">";
+    }
+
+    if($cadena[$longitudEtiqueta] == "#"){
+        $longitudEtiqueta++;
+        while($cadena[$longitudEtiqueta] !== "."){
+            $id .= $cadena[$longitudEtiqueta++];
+        }
+        $longitudEtiqueta++;
+        while($cadena[$longitudEtiqueta] !== $cadena[strlen($cadena)]){
+            $clases .= $cadena[$longitudEtiqueta++];
+        }
+        //return "<" . $etiqueta . " id=" . $id . " class=" . $clases . "></" . $etiqueta . ">";
+    }
+    echo $clases . "<br>";
+    echo $id;
+
+}
+
+echo generarHTML("div.coche cochaso primo#VWPolo");
