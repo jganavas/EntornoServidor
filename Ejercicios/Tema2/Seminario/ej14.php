@@ -1,15 +1,12 @@
 <?php
 function mosaico($n){
     $mosaico = "";
-    $num = 0;
-    for ($i = 1; $i < $n+1; $i++) {
-        while($num < $i){
+    for ($i = 1; $i <= $n; $i++) {
+        for ($j = 1; $j <= $i ; $j++) {
             $mosaico .= $i;
-            $num++;
         }
         $mosaico .= "<br>";
     }
     return $mosaico;
 }
-
-echo mosaico(6);
+echo mosaico(8);
