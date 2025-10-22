@@ -1,19 +1,14 @@
 <?php
-//RUTAS
-const index = "../index.php";
-define("sobremi", "../pages/sobremi.php");
-define("contacto", "../pages/contacto.php");
+// VARIABLES GENERALES
+const NOMBRE = "Pepe";
+const EDAD = 26;
+const CIUDAD = "Granada";
+const TITULO = "Ejercicios PHP";
 
-//VARIABLES
-const nombre = "Pepe";
-const edad = 26;
-const ciudad = "Granada";
-const titulo = "Ejercicios";
-
-//FECHA Y HORA
+// FECHA Y HORA
 date_default_timezone_set("Europe/Madrid");
-define("fecha", date("d/m/Y"));
-define("hora", date("h:i:s"));
-
+$fecha = date("d/m/Y");
+$hora = date("H:i:s");
+?>
 
 
