@@ -1,10 +1,17 @@
 <?php
 function convertirMillasToKm($milla){
-    $km = 1.60934;
-    $km *= $milla;
+    try{
+        $km = 1.60934;
+        $km *= $milla;
 
-    return $km;
+        return "Conversion: " . $km;
+    }catch(UnhandledMatchError $ex){
+        echo "Introduce un valor válido" . "\n";
+    }catch(TypeError $tE){
+        echo "Introduce el tipo correspondiente" . "\n";
+    }
 }
 
-$kilometros = convertirMillasToKm(25.07);
-echo "Conversion: {$kilometros}";
+echo convertirMillasToKm(25.07);
+//echo convertirMillasToKm("h");
+

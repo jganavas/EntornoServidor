@@ -1,5 +1,9 @@
 <?php
 function clasificarNotas($nota){
+    if(is_string($nota)){
+        echo "Asin no bro";
+        die();
+    }
     return match($nota){
         9,10 => "Sobresaliente",
         7,8 => "Notable",
@@ -9,4 +13,5 @@ function clasificarNotas($nota){
     };
 }
 
-echo clasificarNotas(3);
+echo clasificarNotas(3) . "\n";
+echo clasificarNotas("bro");

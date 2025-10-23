@@ -1,14 +1,21 @@
 <?php
+//Necesario para que php no convierta el número en string, si no se lo come con patatas aunque tipes el parámetro de la función
+declare(strict_types=1);
 function capitalizar($cadena){
-    $array = str_word_count($cadena, 1);
-    $string = "";
-    foreach ($array as $palabra) {
-        $palabra[0] = strtoupper($palabra[0]);
-        $string .= " " . $palabra;
+    try{
+        $array = str_word_count($cadena, 1);
+        $string = "";
+        foreach ($array as $palabra) {
+            $palabra[0] = strtoupper($palabra[0]);
+            $string .= " " . $palabra;
+        }
+        return $string . "\n";
+    }catch(UnhandledMatchError $ex){
+        echo "Introduce un valor válido" . "\n";
+    }catch(TypeError $tE){
+        echo "Introduce el tipo correspondiente" . "\n";
     }
-    return $string;
 }
 
-$cadena = "me llamo pepin pepon";
-$res = capitalizar($cadena);
-echo $res;
+echo capitalizar("hola mundo shu primiyos");
+echo capitalizar(5);
