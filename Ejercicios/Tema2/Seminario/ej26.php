@@ -1,5 +1,6 @@
 <?php
 function validarDatos($arrayAsociativo){
+
     $nombreDefault = "Anónimo";
     $emailDefault = "sin-email@example.com";
     $edadDefault = "18";
