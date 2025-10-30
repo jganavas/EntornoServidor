@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8556c56b-ebdb-4f47-87f6-7d778f3a4e2d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="caee4745-e5af-428e-aa90-545515b5a05e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/EntornoServidor.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/Tema1/ejercicioTema1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/Tema1/ejercicioTema1/.idea/ejercicioTema1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/Tema1/ejercicioTema1/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/Tema1/ejercicioTema1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/Tema1/ejercicioTema1/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/Tema1/ejercicioTema1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/Tema2/Seminario/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/Tema2/Seminario/.idea/SeminarioT2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/Tema2/Seminario/.idea/dictionaries/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/Tema2/Seminario/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/Tema2/Seminario/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/Tema2/Seminario/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/Tema2/Seminario/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/Tema2/subirNota/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/Tema2/subirNota/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/Tema2/subirNota/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/Tema2/subirNota/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/Tema2/subirNota/.idea/subirNotaT2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ejercicios/Tema2/subirNota/.idea/vcs.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,104 +36,50 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="PHP File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;jganavas&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "jganavas"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/jganavas/EntornoServidor.git&quot;,
-    &quot;accountId&quot;: &quot;b2ba0517-f2e1-4f5e-af10-0a0bae388a25&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/jganavas/EntornoServidor.git",
+    "accountId": "b2ba0517-f2e1-4f5e-af10-0a0bae388a25"
   }
-}</component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.4.12/bin/php" />
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="33S9aQyodu8o6CVHzAS8PdWbxwQ" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+}]]></component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/bin/php" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="34mGTnmYQmPuq4cwWer1lNWuvAA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JavaScript Debug.ej29.php.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Notification.DisplayName-DoNotAsk-PHP-CGI Server": "PHP-CGI server",
-    "Notification.DoNotAsk-PHP-CGI Server": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/usua5pc6/Escritorio/EntornoServidor",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.completion",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="PHP Script.ej3.php">
-    <configuration name="ej29.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/Ejercicios/Tema2/Seminario/ej29.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="ej3.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/Ejercicios/Tema2/subirNota/ej3.php">
-      <CommandLine>
-        <PhpTestInterpreterSettings>
-          <option name="interpreterName" value="/opt/homebrew/Cellar/php/8.4.12/bin/php" />
-        </PhpTestInterpreterSettings>
-      </CommandLine>
-      <method v="2" />
-    </configuration>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-d6986cc7102b-9c94529fcfe0-JavaScript-PS-252.26199.163" />
-        <option value="bundled-php-predefined-a98d8de5180a-f0a8ef430dfa-com.jetbrains.php.sharedIndexes-PS-252.26199.163" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8556c56b-ebdb-4f47-87f6-7d778f3a4e2d" name="Changes" comment="" />
-      <created>1759299669256</created>
+      <changelist id="caee4745-e5af-428e-aa90-545515b5a05e" name="Changes" comment="" />
+      <created>1761811343903</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1759299669256</updated>
-      <workItem from="1759299670980" duration="7476000" />
-      <workItem from="1760637943828" duration="289000" />
-      <workItem from="1760892922293" duration="7000" />
-      <workItem from="1760893029898" duration="2978000" />
-      <workItem from="1761068738846" duration="226000" />
-      <workItem from="1761565548953" duration="49000" />
-      <workItem from="1761565635392" duration="54000" />
-      <workItem from="1761653973986" duration="437000" />
-      <workItem from="1761654420465" duration="699000" />
-      <workItem from="1761724628794" duration="2917000" />
-      <workItem from="1761759221152" duration="957000" />
-      <workItem from="1761760362589" duration="2188000" />
+      <updated>1761811343903</updated>
+      <workItem from="1761811347255" duration="64000" />
     </task>
     <servers />
   </component>
