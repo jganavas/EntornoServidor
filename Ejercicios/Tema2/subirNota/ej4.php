@@ -18,13 +18,13 @@ function analizarTexto($texto, $secuencia){
     $longitudPromedio = $totalPalabras > 0 ?
         $longitudTotal / $totalPalabras : 0;
 
-    $sequence = "";
+    $sequence = [];
     $secuenciaNGrama = [];
     for ($i = 0; $i < count($palabras); $i++) {
-        for ($j = 0; $j < $secuencia; $j++) {
-            $sequence .= $palabras[$j];
-            array_push($secuenciaNGrama, $sequence);
+        for ($j = $i; $j < $secuencia; $j++) {
+            array_push($sequence, $palabras[$j]);
         }
+        array_push($secuenciaNGrama, $sequence);
     }
 
     return [
