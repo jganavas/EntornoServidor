@@ -19,25 +19,25 @@ function validarFormulario($email, $nombre, $tlf, $pass){
         if(validarNombre($nombre)){
             if(validarTelefono($tlf)){
                 if(validarContrasena($pass)){
-                    echo "Los valores son correctos" . "<br>";
+                    echo "Los valores son correctos\n";
                 }
             }
         }
     }
     if(!validarEmail($email)){
-        echo "El email no es valido" . "<br>";
+        echo "El email no es valido\n";
     }
     if(!validarContrasena($pass)){
-        echo "La contraseña no es valida" . "<br>";
+        echo "La contraseña no es valida\n";
     }
     if(!validarTelefono($tlf)){
-        echo "El telefono no es valido" . "<br>";
+        echo "El telefono no es valido\n";
     }
     if(!validarNombre($nombre)){
-        echo "El nombre no es valido" . "<br>";
+        echo "El nombre no es valido\n";
     }
 }
-
+/*
 echo "Validar email 1 (El correcto): " . (validarEmail("jganavas@gmail.com") ? "Válido" : "No válido") . "<br>";
 echo "Validar email 2 (Erróneo): " . (validarEmail("122") ? "Válido" : "No válido") . "<br>";
 echo "Validad nombre 1 (Correcto): " . (validarNombre("Pepe") ? "Válido" : "No válido") . "<br>";
@@ -52,3 +52,4 @@ echo "Validación formulario 2 (Incorrecta total): <br>";
 validarFormulario("jojojo23", "__2d", 7777777777777, "estonoesunacontraseña");
 echo "Validación formulario 1 (Parcial): <br>";
 validarFormulario("jganavas@gmail.com", "__2d", 666333666, "estonoesunacontraseña");
+*/
