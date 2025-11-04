@@ -30,6 +30,24 @@ while($opcion != 5){
             $pass = readline("Contraseña: ");
             echo validarFormulario($email, $nombre, $tlf, $pass) . "\n";
             break;
+        case 3:
+            $productos = [
+                ["id" => 1, "nombre" => "Laptop", "precio" => 899.99, "stock" => 10],
+                ["id" => 2, "nombre" => "Teléfono", "precio" => 499.50, "stock" => 15],
+                ["id" => 3, "nombre" => "Tablet", "precio" => 349.99, "stock" => 5]
+            ];
+            $producto = readline("¿Qué producto quieres buscar?");
+            $res = buscarProducto($productos, $producto);
+            print_r($res);
+            echo "\n";
+            break;
+        case 4:
+            $cadena = readline("Introduce la cadena a analizar");
+            $ngrama = readline("A qué nivel de n-grama quieres llegar?");
+            $res = analizarTexto($cadena, $ngrama);
+            print_r($res);
+            echo "\n";
+            break;
     };
 }
 
