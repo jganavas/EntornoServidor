@@ -4,7 +4,8 @@ try {
     echo "PDO connection object created";
 
     $res = $dbh->query('SELECT * FROM productos');
-    echo $res;
+    $productos = $res->fetchAll(PDO::FETCH_ASSOC);
+    print_r($productos);
 
 }
 catch(PDOException $e)
