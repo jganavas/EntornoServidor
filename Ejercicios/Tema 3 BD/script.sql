@@ -77,7 +77,7 @@ select SUM(stock) from productos;
 
 /* EJERCICIO 4 */
 
-select p.nombre, precio, c.nombre from productos p join categorias c on p.id = c.id; 
+select p.nombre, precio, c.nombre from productos p join categorias c on p.categoria_id = c.id order by c.nombre asc, p.precio asc;
 
 /* EJERCICIO 5 */
 
