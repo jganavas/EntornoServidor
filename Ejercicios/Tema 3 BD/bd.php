@@ -181,69 +181,163 @@ try {
 //        echo $p['nombre'] . ' - ' . $p['precio'] . "\n";
 //    };
 
+    /*
     //EJERCICIO 7
     $pdo->beginTransaction();
 
-    echo "CREACIÓN DE PRODUCTO";
-    $opc = 1;
-    while($opc != 0){
+    echo "CREACIÓN DE PRODUCTO\n";
+    $pararPedido = false;
+    while(!$pararPedido){
+
         //Seleccion o creación de usuario si no existe
         $usuario = readline("Introduce id usuario");
         $stmt = $pdo->prepare( 'select id from usuarios where id = ?;');
         $stmt->execute([$usuario]);
         $res = $stmt->rowCount();
-        if($res = 0){
-            $pdo->execute('INSERT INTO usuarios VALUES ($usuario, "email@defaul.com", "pass1234")');
+
+        if($res == 0){
+            $stmt = $pdo->prepare('INSERT INTO usuarios VALUES (? , "email@defaul.com", "pass1234")');
+            $stmt->execute($usuario);
         }
 
         //Pedir productos y stock
-        $pedir = 0;
-        while($pedir != 0){
+        $pararProductos = false;
+        while(!$pararProductos){
+
             //Muestro productos
-            $stmt = $pdo->query( 'SELECT * FROM productos ORDER BY precio asc');
+            $stmt = $pdo->query( 'SELECT * FROM productos ORDER BY id asc');
             $productos = $stmt->fetchAll(PDO::FETCH_ASSOC );
             $numeroDeProductos = $stmt->rowCount();
 
             foreach ($productos as $p){
                 echo $p['id'] . ' - ' . $p['nombre'] . "\n";
             };
-            //Guardo los productos en un array
-            while($id_producto < 0 || $id_producto > $numeroDeProductos){
-                echo "Escribe 0 para salir\n";
-                $id_producto = readline("Selecciona id de producto");
+
+            ///Pido producto y valido
+            $id_producto = readline("Selecciona id de producto");
+
+            while($id_producto < 0 || $id_producto > $numeroDeProductos || $id_producto == 0){
+                $id_producto = readline("Selecciona id de producto (0 para continuar)");
             }
+
+            //Valido que haya suficiennte stock del producto
             $cant = readline("Cuánto quieres comprar?");
-            $productos[] = ["id_producto" => $id_producto, "cantidad" =>$cant];
+            $stmt = $pdo->prepare( 'select stock from productos where id = ?;');
+            $stmt->execute([$id_producto]);
+            $stock = $stmt->fetchColumn();
+
+            while(($stock - $cant < 0) || $cant <= 0){
+                echo "No hay suficiente stock";
+                $cant = readline("Cuánto quieres comprar?");
+            }
+            //Creo array con productos
+            $arrayProductos[] = ["id_producto" => $id_producto, "cantidad" =>$cant];
+
+            //Actualizo stock
+            $stmt = $pdo->prepare('update productos set stock = stock - ? where id = ?;');
+            $stmt->execute([$cant, $id_producto]);
+
+            $opc = readline("Desea comprar otro producto? 1 SI / 0 NO");
+            if($opc == 0) $pararProductos = true;
+
+            $totalPedido = 0;
+            $stmt = $pdo->prepare('select (precio * ?) from productos where id = ?;');
+            foreach($arrayProductos as $items){
+                $cantidad = $items['cantidad'];
+                $id_prod = $items['id_producto'];
+
+                $stmt->execute([$cantidad, $id_prod]);
+
+                $totalPedido += $stmt->fetchColumn();
+            }
+
+            echo "El precio total del pedido es de " . $totalPedido . " euros\n";
+
+            $stmtPrecio = $pdo->prepare('SELECT precio FROM productos WHERE id = ?');
+            $stmtInsert = $pdo->prepare('INSERT INTO pedidos (usuario_id, fecha, total, producto_id, cantidad) VALUES (?, ?, ?, ?, ?)');
+
+            foreach ($arrayProductos as $item) {
+                $stmtPrecio->execute([$item['id_producto']]);
+                $precioUnitario = $stmtPrecio->fetchColumn();
+
+                $total = $precioUnitario * $item['cantidad'];
+
+                // 2. Insertamos la fila
+                $stmtInsert->execute([
+                    $usuario, "2025-11-20", $total, $item['id_producto'], $item['cantidad']
+                ]);
+            }
+
+            echo "Pedido generado";
+            $pararProductos = true;
         }
-
-
-
     }
-
-
-
-
-    //Comprebo si usuario existe
-    $stmt = $pdo->prepare( 'select id from usuarios where id = ?;');
-    $stmt->execute([2]);
-    $res = $stmt->rowCount();
-    if($res = 0){
-        echo "El usuario no existe";
-    }
-
-    //Reciclo código del apartado C del ej5 para crear pedido y actualizar stock
-    if($res - 4 > 0){
-        $stmt = $pdo->prepare('INSERT INTO pedidos (usuario_id, fecha, total, producto_id, cantidad) VALUES (?, ?, ?, ?, ?)');
-        $stmt->execute([1, '2025-11-2', 79.85, 5, 1]);
-
-        $stmt = $pdo->prepare( 'update productos set stock = stock - ? where id = ?;');
-        $stmt->execute([4, 2]);
-        $filas = $stmt->rowCount();
-        echo 'Actualizados: ' . $filas;
-    }
-
-    //El apartado 3 ya estaría hecho porque mi tabla pedidos incluye el total
     $pdo->commit();
+    */
+
+    //EJERCICIO 8
+    //APARTADO A
+    /*
+    $consulta = "select pr.nombre, sum(p.cantidad) as total_vendido
+        from pedidos p
+        join productos pr on p.producto_id = pr.id
+        group by pr.id, pr.nombre
+        order by total_vendido desc
+        limit 5";
+
+    $stmt = $pdo->query($consulta);
+    $filas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($filas as $f) {
+        echo $f['nombre'] . " - Unidades: " . $f['total_vendido'] . "\n";
+    }
+    */
+
+    //APARTADO B
+    /*
+    $consulta = "select c.nombre, sum(p.total) as ingresos
+        from categorias c
+        join productos pr on c.id = pr.categoria_id
+        join pedidos p on pr.id = p.producto_id
+        group by c.id, c.nombre
+        order by ingresos desc";
+
+    $stmt = $pdo->query($consulta);
+    $filas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($filas as $f) {
+        echo $f['nombre'] . " - Total: " . $f['ingresos'] . " euros\n";
+    }
+    */
+
+    //APARTADO C
+    /*
+    $consulta = "select nombre, stock from productos where stock < 10 order by stock asc";
+
+    $stmt = $pdo->query($consulta);
+    $filas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($filas as $f) {
+        echo $f['nombre'] . " - " . $f['stock'] . "\n";
+    }
+    */
+
+    //APARTADO D
+    /*
+    $consulta = "select u.nombre, sum(p.total) as gasto_total
+        from usuarios u
+        join pedidos p on u.id = p.usuario_id
+        group by u.id, u.nombre
+        order by gasto_total desc
+        limit 3";
+
+    $stmt = $pdo->query($consulta);
+    $filas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($filas as $f) {
+        echo $f['nombre'] . " - Ha gastado: " . $f['gasto_total'] . " euros\n";
+    }
+    */
 
 } catch(PDOException $e) {
     $pdo->rollBack();
