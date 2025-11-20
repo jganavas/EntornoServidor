@@ -258,11 +258,10 @@ try {
 
             foreach ($arrayProductos as $item) {
                 $stmtPrecio->execute([$item['id_producto']]);
-                $precioUnitario = $stmtPrecio->fetchColumn();
+                $precio = $stmtPrecio->fetchColumn();
 
-                $total = $precioUnitario * $item['cantidad'];
+                $total = $precio * $item['cantidad'];
 
-                // 2. Insertamos la fila
                 $stmtInsert->execute([
                     $usuario, "2025-11-20", $total, $item['id_producto'], $item['cantidad']
                 ]);
