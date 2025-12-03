@@ -17,6 +17,16 @@ class Libro
         set => ($value < 0 || $value > $this->ejemplares) ? throw new Exception("minimo 0") : $this->disponibles = $value;
     }
 
+    public function __construct($id, $autorId, $isbn, $generoId, $disponibles, $ejemplares, $titulo){
+        $this->id = $id;
+        $this->autorId = $autorId;
+        $this->isbn = $isbn;
+        $this->generoId = $generoId;
+        $this->disponibles = $disponibles;
+        $this->ejemplares = $ejemplares;
+        $this->titulo = $titulo;
+    }
+
     public function estaDisponible($id) : bool{
         return $this->disponibles < 0;
     }
@@ -57,7 +67,6 @@ class Libro
 
         return $libros;
     }
-
 }
 print_r(Libro::buscarTodos());
 
